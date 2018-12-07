@@ -1,0 +1,32 @@
+int dzies(string binar)
+{
+    int fin=0;
+
+    for(int i =binar.length()-1 ; i>=0;i--)
+    {
+        fin+=pow(2,binar.length()-i-1)*((int)(binar[i])-48);
+    }
+    return fin;
+}
+int dzieslepszy(string binar) //schemat Hornera
+{
+    int fin=0;
+
+    for(int i = 0; i<binar.length()  ;i++)
+        fin=fin*2+(int)(binar[i]-48);
+
+    return fin;
+}
+string zamien(int liczba)
+{
+    string binar="";
+
+    while(liczba>1)
+    {
+        binar=((char)(liczba%2+48))+binar;
+        liczba=liczba/2;
+
+    }
+    binar=(char)(liczba+48)+binar;
+    return binar;
+}

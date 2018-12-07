@@ -30,3 +30,21 @@ string zamien(int liczba)
     binar=(char)(liczba+48)+binar;
     return binar;
 }
+string szesna(int liczba)
+{
+    string szesna="";
+
+    while(liczba>1)
+    {
+        if(liczba%16>=10)
+            szesna=((char)(liczba%16-10+65))+szesna;
+        else
+            szesna=((char)(liczba%16+48))+szesna;
+
+        liczba=liczba/16;
+
+    }
+    if(liczba==1)
+        szesna+=
+    return szesna;
+}
